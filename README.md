@@ -30,7 +30,7 @@ For more detailed information about the AQI values, you can check out [this page
 
 Unfortunately, the AICQN API has a weird bug with Japanese city, where the results instead of being numerical is the string '-'. 
 
-I'm sorry for this inconvenience, but I have to ask you to avoid Japanese cities.
+I'm sorry for this inconvenience, but I have to ask you to avoid using Japanese cities as input.
 
 ## Contacts
 
