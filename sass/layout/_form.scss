@@ -1,0 +1,109 @@
+//Style for the form and the error message
+
+.form {
+  display: flex;
+  margin-top: 2rem;
+  width: 90%;
+  @media only screen and (max-height: 390px) {
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: 460px) {
+    margin-top: 11rem;
+    position: absolute;
+    right: 3rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    margin-top: 2rem;
+
+    & > * {
+      font-size: 1.5rem;
+      border: none;
+    }
+
+    @media only screen and (max-width: 880px) {
+      margin-top: 4rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 8rem;
+    }
+    @media only screen and (max-height: 370px) {
+      margin-top: 3rem;
+    }
+    @media only screen and (max-height: 320px) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__form {
+    margin-left: 3rem;
+    width: 50%;
+  }
+
+  &__label {
+    font-style: italic;
+  }
+  &__input {
+    padding: 0.8rem;
+    margin: 2rem 0;
+    width: 91%;
+    outline: none;
+    border: 0.1rem solid $color-grey-light;
+    border-radius: 1rem;
+    @media only screen and (max-height: 320px) {
+      margin: 1rem;
+    }
+
+    &:focus {
+      transition: border 0.3s;
+      border: 0.3rem solid $color-grey-dark;
+    }
+  }
+
+  &__button {
+    padding: 0.8rem;
+    width: 60%;
+    cursor: pointer;
+    background-color: $color-grey-light;
+    border-radius: 4rem;
+
+    //The next two rules exploit the hover and active pseudoclass to give a illusion of three-dimensionality
+    &:hover {
+      transition: all 0.3s;
+      background-color: $color-blue-light;
+      transform: translateY(-0.3rem);
+      box-shadow: 0rem 0.6rem 1.1rem 0.3rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(-0.2rem);
+      box-shadow: 0rem 0.6rem 1.1rem 0.05rem rgba(0, 0, 0, 0.2);
+    }
+
+    @media only screen and (max-width: 650px) {
+      width: 90%;
+    }
+  }
+  //This is the style for the error message below the form itself
+  &__error {
+    background-color: rgba($color: #f00, $alpha: 0.7);
+    width: 91%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    visibility: hidden;
+    @media only screen and (max-width: 460px),
+      only screen and (max-height: 490px) {
+      width: 190%;
+    }
+    @media only screen and (max-height: 305px) {
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+//General page style
+
+body {
+  background: linear-gradient(to bottom right, $color-blue, $color-blue-light);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: absolute;
+  text-align: center;
+  height: 85%;
+  width: 80%;
+  background-color: #f8f9fa;
+  border-radius: 2rem;
+  @media only screen and (max-width: 600px) {
+    width: 98%;
+  }
+
+  @media only screen and (max-width: 360px) {
+    height: 85%;
+  }
+  @media only screen and (max-height: 900px) {
+    height: 95%;
+  }
+
+  @media only screen and (max-height: 600px) {
+    height: 95%;
+  }
+
+  @media only screen and (max-height: 430px) {
+    height: 100%;
+    width: 90%;
+  }
+}
+
+.title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  @media only screen and (max-width: 600px),
+    only screen and (max-height: 340px) {
+    font-size: 4rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 3rem;
+  }
+  @media only screen and (max-width: 260px) {
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-height: 300px) {
+    font-size: 3rem;
+  }
+}
+
+.copyright {
+  margin-top: 1.5rem;
+}

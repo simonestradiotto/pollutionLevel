@@ -1,0 +1,42 @@
+//Styling the results widget
+
+.results {
+  width: 50%;
+  visibility: hidden;
+
+  @media only screen and (max-width: 880px) {
+    margin-top: 4rem;
+  }
+
+  @media only screen and (max-height: 710px) {
+    margin-top: 0.5rem;
+  }
+  &__container {
+    color: #fff;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    background: linear-gradient(
+      to bottom right,
+      $color-blue,
+      $color-blue-light
+    );
+    @media only screen and (max-width: 300px) {
+      margin-top: 3rem;
+    }
+  }
+  &__aqi {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    @media only screen and (max-width: 420px) {
+      font-size: 3rem;
+    }
+  }
+  &__city {
+    font-size: 2rem;
+  }
+}

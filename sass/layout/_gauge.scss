@@ -1,0 +1,54 @@
+//Styling the gauge
+
+.gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-height: 360px) {
+    position: relative;
+
+    top: -4rem;
+  }
+
+  &__icon {
+    font-size: 40rem;
+    &--max {
+      //__icon--max is a different type of icon that appears when the aqi is relìally high
+      font-size: 25rem;
+      color: #141517;
+      @media only screen and (max-width: 750px) {
+        font-size: 11rem;
+        margin-top: 10rem;
+      }
+      @media only screen and (max-width: 300px) {
+        font-size: 9rem;
+      }
+    }
+    @media only screen and (max-width: 770px) {
+      font-size: 35rem;
+    }
+    @media only screen and (max-width: 680px) {
+      margin-top: 4rem;
+      font-size: 30rem;
+    }
+    @media only screen and (max-width: 500px),
+      only screen and (max-height: 670px) {
+      font-size: 25rem;
+    }
+    @media only screen and (max-width: 400px) {
+      font-size: 20rem;
+    }
+    @media only screen and (max-width: 280px) {
+      font-size: 18rem;
+    }
+  }
+  &__emoticon {
+    //The emoticon starts hidden
+    visibility: hidden;
+    font-size: 7rem;
+    bottom: 1.5rem;
+    @media only screen and (max-height: 330px) {
+      font-size: 5rem;
+    }
+  }
+}

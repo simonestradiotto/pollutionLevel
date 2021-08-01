@@ -1,0 +1,23 @@
+//Typography rules
+
+* {
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+  &::selection {
+    background-color: $color-grey;
+  }
+  @media only screen and (max-width: 1040px) {
+    font-size: 9px;
+  }
+  @media only screen and (max-width: 880px),
+    only screen and (max-height: 640px) {
+    font-size: 8px;
+  }
+  @media only screen and (max-width: 360px),
+    only screen and (max-height: 530px) {
+    font-size: 7px;
+  }
+  @media only screen and (min-height: 1010px) {
+    font-size: 9px;
+  }
+}

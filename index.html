@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pollution Levels</title>
+
+    <!--Icon from iconmonstr-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdns.iconmonstr.com/wp-content/assets/preview/2016/240/iconmonstr-weather-91.png"
+    />
+
+    <!--Google fonts cdn-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--I used the keyword defer to put the scripts in the head-->
+
+    <!--Fontawesome cdn-->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Axios cdn-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ></script>
+
+    <!--My script-->
+    <script defer src="dist/main.js"></script>
+  </head>
+  <body>
+    <!--The main container starts hidden. After the code is loaded, then it'll became visible-->
+    <div class="container" hidden>
+      <h1 class="title">City air quality detector</h1>
+
+      <!--The gauge and the emoticon-->
+      <article class="content">
+        <aside class="content__gauge">
+          <div class="gauge">
+            <div class="gauge__icon--container">
+              <i class="fas fa-thermometer-empty gauge__icon"></i>
+            </div>
+            <div class="gauge__emoticon"></div>
+          </div>
+        </aside>
+
+        <!--The informations and suggenstions-->
+        <section class="content__main">
+          <div class="suggestions">
+            <p class="suggestions__info suggestions__info--1">
+              We often tend to underestimate the importance of the quality of
+              the air we breathe. We take it for granted. Well, guess what: it's
+              not. Air quality is a very important factor for both the health of
+              people and for that of ecosystems.
+            </p>
+            <p class="suggestions__info suggestions__info--2">
+              This app will help you figure out if you live or need to travel in
+              a polluted city, so you can take appropriate precautions.
+            </p>
+          </div>
+
+          <!--The form-->
+          <div class="form">
+            <form class="form__form" action="">
+              <div class="form__container">
+                <label class="form__label" for="cityName"
+                  >Insert the name of the city:</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  id="cityName"
+                  name="cityName"
+                  required
+                />
+                <button class="form__button" type="submit">
+                  Check pollution
+                </button>
+                <div class="form__error">Error</div>
+              </div>
+            </form>
+
+            <!--The results-->
+            <div class="results">
+              <div class="results__container">
+                <div class="results__aqi"></div>
+                <div class="results__city"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <div class="copyright">&#169; 2021 Simone Stradiotto</div>
+    </div>
+  </body>
+</html>

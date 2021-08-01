@@ -1,0 +1,60 @@
+//Styling the suggestions
+
+.suggestions {
+  display: flex;
+  justify-content: space-evenly;
+  height: 40%;
+
+  @media only screen and (max-width: 460px),
+    only screen and (max-height: 590px) {
+    flex-direction: column;
+  }
+
+  &__info {
+    text-align: left;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
+    width: 50%;
+    @media only screen and (max-width: 680px) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: 460px),
+      only screen and (max-height: 590px) {
+      width: 90%;
+      font-size: 1.7rem;
+    }
+    @media only screen and (max-height: 300px) {
+      font-size: 1.4rem;
+    }
+
+    &--1 {
+      @media only screen and (max-width: 460px),
+        only screen and (max-height: 590px) {
+        margin-top: 0;
+      }
+      @media only screen and (min-width: 460px) and (min-height: 590px) {
+        border-right: 0.1rem solid $color-grey-light;
+      }
+      @media only screen and (max-width: 460px) {
+        margin-top: 10rem;
+      }
+      @media only screen and (max-width: 290px) {
+        margin-top: 15rem;
+      }
+    }
+    &--2 {
+      @media only screen and (max-width: 460px),
+        only screen and (max-height: 590px) {
+        margin-top: 0;
+      }
+    }
+    &--strong {
+      font-size: 1.7rem;
+      font-weight: 700;
+      @media only screen and (max-width: 680px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
