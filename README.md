@@ -8,7 +8,6 @@ This app will help you detect pollution in cities.
 
 ## Getting started
 
----
 
 The usage is really straightforward.
 
@@ -20,7 +19,6 @@ This app doesn't require you to install anything. Enjoy it!
 
 ## The results
 
----
 
 After a city is correctly submitted, on the right of the form you'll find a widget with the name of the location you choose and a number.
 
@@ -28,9 +26,14 @@ That number is the Air Quality Index, provided by "[The World Air Quality Projec
 
 For more detailed information about the AQI values, you can check out [this page](https://aqicn.org/scale/).
 
+## Important notes
+
+Unfortunately, the AICQN API has a weird bug with Japanese city, where the results instead of being numerical is the string '-'. 
+
+I'm sorry for this inconvenience, but I have to ask you to avoid Japanese cities.
+
 ## Contacts
 
----
 
 Mail ----> [simone.stradiotto@libero.it](mailto:simone.stradiotto@libero.it)
 
