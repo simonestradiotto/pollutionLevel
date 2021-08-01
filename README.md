@@ -1,6 +1,6 @@
 # Pollution level detector
 
-## Try it: https://distracted-volhard-ae2c1e.netlify.app/
+## Try it: https://pollutionlevels.netlify.app/
 
 Welcome!
 
