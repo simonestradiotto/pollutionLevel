@@ -12,8 +12,17 @@ import {
 } from "./elements";
 
 export function dynamicPage(res) {
-  let aqi = res.data.data.aqi;
   let color1, color2;
+  let aqi;
+
+  //Calculating the aqi
+  if (!("pm10" in res.data.data.iaqi)) {
+    aqi = res.data.data.iaqi.pm25.v;
+  } else if (!("pm25" in res.data.data.iaqi)) {
+    aqi = res.data.data.iaqi.pm10.v;
+  } else {
+    aqi = Math.max(res.data.data.iaqi.pm10.v, res.data.data.iaqi.pm25.v);
+  }
 
   //Checking for the aqi
   if (aqi > 300) {
