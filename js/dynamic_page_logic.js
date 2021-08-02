@@ -14,7 +14,7 @@ import {
 export function dynamicPage(res) {
   let color1, color2;
   let aqi;
-
+  console.log(res);
   //Calculating the aqi
   if (!("pm10" in res.data.data.iaqi)) {
     aqi = res.data.data.iaqi.pm25.v;

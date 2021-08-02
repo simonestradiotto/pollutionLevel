@@ -5,7 +5,7 @@ export function success(pos) {
   const coords = pos.coords;
   //Sending a request with the current coords
   axios(
-    `https://api.waqi.info/feed/geo::${coords.latitude};:${coords.longitude}/?token=${process.env.API_TOKEN}`
+    `https://api.waqi.info/feed/geo:${coords.latitude};${coords.longitude}/?token=${process.env.API_TOKEN}`
   )
     .then((res) => {
       if (res.data.status == "error") {
