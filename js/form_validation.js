@@ -1,7 +1,7 @@
 import { errorMessage, results } from "./elements";
-import { clickLogic } from "./click_logic";
+import { formSubmitLogic } from "./form_submit_logic";
 
-export function validateInput(input) {
+export function formValidation(input) {
   if (!input.value) {
     //If the input field is empty
     results.style.visibility = "hidden";
@@ -19,5 +19,5 @@ export function validateInput(input) {
   }
   //If the input is valid, then we'll trigger the click logic
   errorMessage.style.visibility = "hidden";
-  clickLogic();
+  formSubmitLogic();
 }

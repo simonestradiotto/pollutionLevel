@@ -11,17 +11,20 @@ import {
   suggestion2,
 } from "./elements";
 
-export function dynamicPage(res) {
+export function dynamicPageStyling(res) {
   let color1, color2;
   let aqi;
-  console.log(res);
+
   //Calculating the aqi
-  if (!("pm10" in res.data.data.iaqi)) {
-    aqi = res.data.data.iaqi.pm25.v;
-  } else if (!("pm25" in res.data.data.iaqi)) {
-    aqi = res.data.data.iaqi.pm10.v;
+  if (!("pm10" in _.get(res, "data.data.iaqi"))) {
+    aqi = _.get(res, "data.data.iaqi.pm25.v");
+  } else if (!("pm25" in _.get(res, "data.data.iaqi"))) {
+    aqi = _.get(res, "data.data.iaqi.pm10.v");
   } else {
-    aqi = Math.max(res.data.data.iaqi.pm10.v, res.data.data.iaqi.pm25.v);
+    aqi = Math.max(
+      _.get(res, "data.data.iaqi.pm10.v"),
+      _.get(res, "data.data.iaqi.pm25.v")
+    );
   }
 
   //Checking for the aqi
