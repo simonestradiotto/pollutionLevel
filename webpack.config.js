@@ -30,5 +30,4 @@ module.exports = {
     ],
   },
   plugins: [new Dotenv()],
-  watch: true,
 };

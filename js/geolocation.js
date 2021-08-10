@@ -1,5 +1,5 @@
 import { errorMessage } from "./elements";
-import { dynamicPageStyle } from "./dynamic_page_styling";
+import { dynamicPageStyling } from "./dynamic_page_styling";
 
 export async function success(pos) {
   try {
@@ -13,7 +13,7 @@ export async function success(pos) {
       throw new Error(res.data.data);
     }
     //Modify the page's style and html
-    dynamicPageStyle(res);
+    dynamicPageStyling(res);
   } catch (err) {
     //This also funtion as the default error message
     errorMessage.style.visibility = "visible";
