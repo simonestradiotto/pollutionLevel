@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new Dotenv({
-      systemvars: true,
+      systemvars: true, // allows environment variables to be used in the browser thanks to Netlify
     }),
   ],
 };
