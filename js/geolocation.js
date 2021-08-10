@@ -16,6 +16,7 @@ export async function success(pos) {
     dynamicPageStyling(res);
   } catch (err) {
     //This also funtion as the default error message
+    console.log(err);
     errorMessage.style.visibility = "visible";
     errorMessage.innerHTML =
       "Apparently, there are no stations nearby you. Try to enter a city name!";
