@@ -8,13 +8,22 @@ This app will help you detect pollution in cities.
 
 ## Getting started
 
+### Prerequisites
+
+This app uses the Lodash function get.
+* npm
+```
+npm i --save lodash.get
+```
+
+### Usage
+
 The usage is really straightforward.
 
 When you first open the application, it'll ask for your current position; that's because it'll try to detect pollution in your current area.
 
 If you don't want to give your position, it's fine: just enter a city name in the form and you are good.
 
-This app doesn't require you to install anything. Enjoy it!
 
 ## The results
 
