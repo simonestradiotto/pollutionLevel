@@ -20,5 +20,8 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "lodash.get": "^4.4.2"
   }
 }

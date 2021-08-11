@@ -9,23 +9,19 @@ import {
   emoticon,
   suggestion1,
   suggestion2,
+  input,
 } from "./elements";
+
+import get from "lodash.get";
 
 export function dynamicPageStyling(res) {
   let color1, color2;
-  let aqi;
 
   //Calculating the aqi
-  if (!("pm10" in _.get(res, "data.data.iaqi"))) {
-    aqi = _.get(res, "data.data.iaqi.pm25.v");
-  } else if (!("pm25" in _.get(res, "data.data.iaqi"))) {
-    aqi = _.get(res, "data.data.iaqi.pm10.v");
-  } else {
-    aqi = Math.max(
-      _.get(res, "data.data.iaqi.pm10.v"),
-      _.get(res, "data.data.iaqi.pm25.v")
-    );
-  }
+  let aqi = Math.max(
+    get(res, "data.data.iaqi.pm10.v", ""),
+    get(res, "data.data.iaqi.pm25.v", "")
+  );
 
   //Checking for the aqi
   if (aqi > 300) {
@@ -119,5 +115,5 @@ export function dynamicPageStyling(res) {
   //Changing the informations about the results
   results.style.visibility = "visible";
   aqiValue.innerHTML = aqi;
-  city.innerHTML = res.data.data.city.name;
+  city.innerHTML = get(res, "data.data.city.name", input.value);
 }
